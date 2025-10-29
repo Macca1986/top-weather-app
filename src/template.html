@@ -6,6 +6,60 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Rain effect container -->
+    <div id="rain-container" class="rain-container"></div>
     
+    <!-- Sun rays effect -->
+    <div id="sun-rays" class="sun-rays"></div>
+    
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="weather-form">
+            <input 
+                type="text" 
+                id="location-input" 
+                placeholder="Enter location (e.g., London,UK)" 
+                required
+            />
+            <button type="submit">Get Weather</button>
+        </form>
+        
+        <div id="weather-display" class="weather-display">
+            <div class="weather-header">
+                <h2 id="location-name"></h2>
+                <p id="current-time"></p>
+            </div>
+            
+            <div class="weather-main">
+                <div class="temperature-section">
+                    <div id="current-temp" class="current-temp"></div>
+                    <div id="feels-like" class="feels-like"></div>
+                </div>
+                <div id="conditions" class="conditions"></div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">Today's High</span>
+                    <span id="temp-max" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Today's Low</span>
+                    <span id="temp-min" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="wind-speed" class="detail-value"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="error-message" class="error-message hidden"></div>
+        <div id="loading" class="loading hidden">Loading weather data...</div>
+    </div>
 </body>
 </html>
